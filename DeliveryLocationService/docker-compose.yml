@@ -1,0 +1,25 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=StrongPassword123!  # Stronger password
+      - MSSQL_PID=Express
+      - MSSQL_MEMORY=2GB  # Example memory limit
+      - MSSQL_CPU=2      # Example CPU limit
+    ports:
+      - "2702:1433"  # Map to the default SQL Server port
+    volumes:
+      - sql_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD", "sqlcmd", "-U", "sa", "-P", "StrongPassword123!", "-Q", "SELECT 1"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+
+volumes:
+  sql_data:
+    driver: local
