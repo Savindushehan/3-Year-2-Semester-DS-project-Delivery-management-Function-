@@ -43,7 +43,7 @@ function UserLocationViewer({ userId = 'R1' }) {
   return (
     <div>
       <p>{status}</p>
-      <LoadScript googleMapsApiKey="AIzaSyCms2-r4afPJIKiStBZUNuRx_4BdU2p9ps">
+      <LoadScript googleMapsApiKey="API KEY">
         {location && !isNaN(location.lat) && !isNaN(location.lng) && (
           <GoogleMap
             mapContainerStyle={containerStyle}
