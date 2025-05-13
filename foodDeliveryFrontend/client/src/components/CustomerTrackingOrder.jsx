@@ -8,7 +8,7 @@ const containerStyle = {
   height: '400px',
 };
 
-const googleMapsApiKey = 'AIzaSyCms2-r4afPJIKiStBZUNuRx_4BdU2p9ps'; // Move to .env later
+const googleMapsApiKey = 'Goodle API KEY'; // Move to .env later
 
 function CustomerTrackingOrder() {
   const [currentLocation, setCurrentLocation] = useState(null);
