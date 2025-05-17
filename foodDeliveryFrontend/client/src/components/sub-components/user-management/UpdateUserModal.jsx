@@ -619,7 +619,7 @@ export const UpdateUserModal = ({
                   <Label htmlFor="location" value="Location (Google Maps)" />
                 </div>
                 <LoadScript
-                  googleMapsApiKey="AIzaSyCms2-r4afPJIKiStBZUNuRx_4BdU2p9ps"
+                  googleMapsApiKey="GogleKey"
                   libraries={["places"]}
                 >
                   <GooglePlacesAutocomplete
