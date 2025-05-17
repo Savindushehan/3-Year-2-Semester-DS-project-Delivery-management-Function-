@@ -623,7 +623,7 @@ export const UpdateUserModal = ({
                   libraries={["places"]}
                 >
                   <GooglePlacesAutocomplete
-                    apiKey="AIzaSyCms2-r4afPJIKiStBZUNuRx_4BdU2p9ps"
+                    apiKey="GoogleKey"
                     selectProps={{
                       value,
                       onChange: async (place) => {
